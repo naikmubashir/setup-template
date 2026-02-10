@@ -40,6 +40,30 @@ A full-stack starter template wiring together a **React** frontend and an **Expr
 
 ## Quick Start
 
+### Automated (Recommended)
+
+Run the interactive setup script — it handles everything for you:
+
+```bash
+git clone https://github.com/naikmubashir/setup-template.git
+cd setup-template
+./setup.sh
+```
+
+The script will:
+
+1. Check prerequisites (Node.js, npm, git)
+2. Prompt for project name, description, author, version, and license
+3. Collect PostgreSQL connection details
+4. Update `package.json` in both frontend and backend
+5. Update the `VERSION` file and App title
+6. Create `.env` files for backend and frontend
+7. Install all dependencies
+8. Generate the Prisma client
+9. Initialise a fresh git repository with an initial commit
+
+### Manual
+
 ```bash
 # 1. Clone the repo
 git clone https://github.com/naikmubashir/setup-template.git
@@ -159,6 +183,7 @@ npm run preview      # preview the production build locally
 postgres-node-react-setup/
 ├── VERSION                        # Project version (1.0.0)
 ├── README.md
+├── setup.sh                       # Interactive project bootstrapper
 │
 ├── backend/
 │   ├── package.json               # Backend dependencies & scripts
