@@ -1,0 +1,22 @@
+{
+  "name": "postgres-node-react-setup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-stack app with React, Express, Prisma & PostgreSQL",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm -w backend run dev",
+    "dev:frontend": "npm -w frontend run dev",
+    "build:frontend": "npm -w frontend run build",
+    "lint:frontend": "npm -w frontend run lint",
+    "prisma:generate": "npm -w backend run prisma:generate",
+    "prisma:migrate": "npm -w backend run prisma:migrate"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
